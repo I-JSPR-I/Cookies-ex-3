@@ -12,6 +12,7 @@ namespace Cookies_ex_3
         protected void Page_Load(object sender, EventArgs e)
         {
             HttpCookie cookBezoeker1 = new HttpCookie("Bezoeker");
+            
             cookBezoeker1.Value = Convert.ToString( Convert.ToInt32(cookBezoeker1)+1);
             Response.Cookies.Add(cookBezoeker1);
             lblTeller.Text = Convert.ToString( cookBezoeker1);
